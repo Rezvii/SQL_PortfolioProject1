@@ -3,7 +3,7 @@ SELECT *  FROM `river-overview-364304.Portfolio.coviddeath` LIMIT 1000
 /*
 Covid 19 Data Exploration 
 
-Skills used: Joins, CTE's, Temp Tables, Windows Functions, Aggregate Functions, Creating Views, Converting Data Types
+Skills used: Joins, Windows Functions, Aggregate Functions, Creating Views, Converting Data Types
 
 */
 
@@ -88,7 +88,7 @@ order by 1,2;
 -- Shows Percentage of Population that has recieved at least one Covid Vaccine
 
 SELECT dec.continent, dec.population as Total_population, SUM(vac.total_vaccinations) as vaccinated,
-			(vac.total_vaccinations/dec.population) as _vaccinated_percentage
+(vac.total_vaccinations/dec.population) as _vaccinated_percentage
  From `river-overview-364304.Portfolio.coviddeath` dec
 Join `river-overview-364304.Portfolio.covidvaccine` vac ON dec.continent=vac.continent
 Where dec.continent is not null and dec.population is not null
