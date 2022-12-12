@@ -1,5 +1,3 @@
-SELECT *  FROM `river-overview-364304.Portfolio.coviddeath` LIMIT 1000
-
 /*
 Covid 19 Data Exploration 
 
